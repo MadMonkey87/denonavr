@@ -128,6 +128,12 @@ class DenonAVRToneControl(DenonAVRFoundation):
     ##############
     # Properties #
     ##############
+
+    @property
+    def tone_control_enabled(self) -> Optional[bool]:
+        """Return if tone control is enabled or disabled."""
+        return self._tone_control_adjust
+    
     @property
     def bass(self) -> Optional[int]:
         """Return value of bass."""
